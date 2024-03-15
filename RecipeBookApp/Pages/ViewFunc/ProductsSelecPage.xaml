@@ -1,0 +1,70 @@
+﻿<Page x:Class="RecipeBookApp.Pages.ViewFunc.ProductsSelecPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RecipeBookApp.Pages.ViewFunc"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ProductsSelecPage">
+
+    <Grid x:Name="IngList" Background="AliceBlue">
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="107"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="26"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="127*"/>
+            <ColumnDefinition Width="545*"/>
+            <ColumnDefinition Width="128*"/>
+        </Grid.ColumnDefinitions>
+        <ToolBar Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" Width="502" >
+            <ToggleButton Height="72" Width="67" x:Name="ToggleButtonAll" Click="ToggleButtonClick" IsChecked="True">
+                <WrapPanel Orientation="Vertical" Width="38">
+                    <Image Height="39" Source="/Pages/ViewFunc/Icons/basket.png" Width="38"/>
+                    <TextBlock FontSize="14" FontWeight="Bold">All</TextBlock>
+                </WrapPanel>
+            </ToggleButton>
+            <ToggleButton Height="72" Width="67" x:Name="ToggleButtonVegetable" Click="ToggleButtonClick" TextBlock.FontSize="14" TextBlock.FontWeight="Bold">
+                <WrapPanel Orientation="Vertical">
+                    <Image Height="46" Source="\Pages\ViewFunc\Icons\vegetable.png" />
+                    <TextBlock>Vegetabels</TextBlock>
+                </WrapPanel>
+            </ToggleButton>
+            <ToggleButton Height="72" Width="67" x:Name="ToggleButtonFruit" Click="ToggleButtonClick">
+                <WrapPanel Orientation="Vertical">
+                    <Image Height="46" Source="/Pages/ViewFunc/Icons/harvest.png"/>
+                    <TextBlock FontSize="14" FontWeight="Bold">Fruits</TextBlock>
+                </WrapPanel>
+            </ToggleButton>
+            <ToggleButton Height="72" Width="67" x:Name="ToggleButtonGroats" Click="ToggleButtonClick" >
+                <WrapPanel Orientation="Vertical">
+                    <Image Height="46" Source="/Pages/ViewFunc/Icons/water.png"/>
+                    <TextBlock FontSize="14" FontWeight="Bold">Groats</TextBlock>
+                </WrapPanel>
+            </ToggleButton>
+            <ToggleButton Height="72" Width="67" x:Name="ToggleButtonSpuices" Click="ToggleButtonClick">
+                <WrapPanel Orientation="Vertical">
+                    <Image Height="46" Source="/Pages/ViewFunc/Icons/salt.png"/>
+                    <TextBlock FontSize="14" FontWeight="Bold">Spuices</TextBlock>
+                </WrapPanel>
+            </ToggleButton>
+            <ToggleButton Height="72" Width="67" x:Name="ToggleButtonBaking" Click="ToggleButtonClick" >
+                <WrapPanel Orientation="Vertical">
+                    <Image Height="46" Source="/Pages/ViewFunc/Icons/bake.png"/>
+                    <TextBlock FontSize="14" FontWeight="Bold">Baking</TextBlock>
+                </WrapPanel>
+            </ToggleButton>
+            <ToggleButton Height="72" Width="67" x:Name="ToggleButtonDishes" Click="ToggleButtonClick" HorizontalAlignment="Left" >
+                <WrapPanel Orientation="Vertical">
+                    <Image Height="46" Source="/Pages/ViewFunc/Icons/cloche.png"/>
+                    <TextBlock FontSize="14" FontWeight="Bold">Dishes</TextBlock>
+                </WrapPanel>
+            </ToggleButton>
+        </ToolBar>
+        <DataGrid IsReadOnly="True" Grid.Row="1" Grid.Column="1" Background="AliceBlue" Name="DataGrid" FontSize="18"/>
+    </Grid>
+</Page>
