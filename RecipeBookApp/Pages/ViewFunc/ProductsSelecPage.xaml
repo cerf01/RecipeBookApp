@@ -65,6 +65,18 @@
                 </WrapPanel>
             </ToggleButton>
         </ToolBar>
-        <DataGrid IsReadOnly="True" Grid.Row="1" Grid.Column="1" Background="AliceBlue" Name="DataGrid" FontSize="18"/>
+        <DataGrid IsReadOnly="True" Grid.Row="1" Grid.Column="1" Background="AliceBlue" Name="DataGrid" FontSize="18">
+            <DataGrid.ContextMenu>
+                <ContextMenu BorderBrush="Black" BorderThickness="1">
+
+                    <MenuItem Header="_Export as Excel"   
+                             
+                              />
+                    <MenuItem Header="_Menu Item1"  
+                                                            
+                              />
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+        </DataGrid>
     </Grid>
 </Page>

@@ -47,5 +47,11 @@ namespace RecipeBookApp.Pages.ViewFunc
                 default: return null;
             }
         }
+
+        private void Input_GotFocus(object sender, RoutedEventArgs e)
+        {
+            Input.Text = "";
+        }
+
     }
 }

@@ -43,5 +43,12 @@ namespace RecipeBookApp.Pages.ViewFunc
 
 
         }
+
+        private void ClearBox(object sender, RoutedEventArgs e)
+        {
+            var txtBox = (TextBox)sender;
+            txtBox.Text = "";
+
+        }
     }
 }

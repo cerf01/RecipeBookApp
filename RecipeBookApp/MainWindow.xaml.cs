@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using RecipeBookApp.Pages.ViewFunc;
 using RecipeBookApp.ViewModel.Navigation;
 
@@ -22,29 +23,35 @@ namespace RecipeBookApp
 
         }
 
-        private void ToggleButtonViewAllClick(object sender, RoutedEventArgs e)
+        private void AllClick(object sender, RoutedEventArgs e)
         {
             _windowViewModel.PageManager.CurrentPage.Key.IsChecked = false;
-            _windowViewModel.PageManager.CurrentPage = new KeyValuePair<System.Windows.Controls.Primitives.ToggleButton, Page>
-                (ToggleButtonViewAll, _windowViewModel.PageManager.ProductsSelecPage);
-            Frame_MainPages.Navigate(_windowViewModel.PageManager.CurrentPage.Value);
-        }
+            var btn = (ToggleButton)sender;
 
-
-        private void ToggleButtonAddRecipeClick(object sender, RoutedEventArgs e)
-        {
-            _windowViewModel.PageManager.CurrentPage.Key.IsChecked = false;
-            _windowViewModel.PageManager.CurrentPage = new KeyValuePair<System.Windows.Controls.Primitives.ToggleButton, Page>
-                (ToggleButtonAddRecipe, _windowViewModel.PageManager.AddRepicePage);
+            switch (btn.Name.ToString())
+            {
+                case "ToggleButtonViewAll":
+                    {
+                        _windowViewModel.PageManager.CurrentPage = new KeyValuePair<System.Windows.Controls.Primitives.ToggleButton, Page>
+                        (ToggleButtonViewAll, _windowViewModel.PageManager.ProductsSelecPage);
+                    }
+                    break;
+                case "ToggleButtonAddFood":
+                    {
+                        _windowViewModel.PageManager.CurrentPage = new KeyValuePair<System.Windows.Controls.Primitives.ToggleButton, Page>
+                        (ToggleButtonAddFood, _windowViewModel.PageManager.AddFoodPage);
+                    }
+                    break;
+                case "ToggleButtonAddRecipe":
+                    {
+                        _windowViewModel.PageManager.CurrentPage = new KeyValuePair<System.Windows.Controls.Primitives.ToggleButton, Page>
+                    (ToggleButtonAddRecipe, _windowViewModel.PageManager.AddRepicePage);
+                    }
+                    break;
+            }
             Frame_MainPages.Navigate(_windowViewModel.PageManager.CurrentPage.Value);
-        }
 
-        private void ToggleButtonAddFoodClick(object sender, RoutedEventArgs e)
-        {
-            _windowViewModel.PageManager.CurrentPage.Key.IsChecked = false;
-            _windowViewModel.PageManager.CurrentPage = new KeyValuePair<System.Windows.Controls.Primitives.ToggleButton, Page>
-                (ToggleButtonAddFood, _windowViewModel.PageManager.AddFoodPage);
-            Frame_MainPages.Navigate(_windowViewModel.PageManager.CurrentPage.Value);
         }
+      
     }
 }

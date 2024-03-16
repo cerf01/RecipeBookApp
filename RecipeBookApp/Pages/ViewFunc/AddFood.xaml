@@ -14,8 +14,8 @@
             <RowDefinition Height="68*"></RowDefinition>
             <RowDefinition Height="75*"></RowDefinition>
         </Grid.RowDefinitions>
-        <TextBox Grid.Row="1" x:Name="Input" HorizontalAlignment="Left" Height="24" Margin="180,2,0,0"  Text="Enter name of food to find" VerticalAlignment="Top" Width="343"/>
-        <ComboBox x:Name="TypesList" Grid.Row="1" HorizontalAlignment="Left" Margin="180,43,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="0" Height="22">
+        <TextBox Grid.Row="1" x:Name="Input" HorizontalAlignment="Left" Height="24" Margin="180,24,0,0"  VerticalAlignment="Top" Width="343" GotFocus="Input_GotFocus"/>
+        <ComboBox x:Name="TypesList" Grid.Row="1" HorizontalAlignment="Left" Margin="180,68,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="0" Height="22">
             <ComboBoxItem Content="Select type"/>
             <ComboBoxItem Content="Fruit"/>
             <ComboBoxItem Content="Vegetable"/>

@@ -12,20 +12,22 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="26"></RowDefinition>
             <RowDefinition Height="100"></RowDefinition>
-            <RowDefinition Height="73*"></RowDefinition>
-            <RowDefinition Height="34*"></RowDefinition>
-            <RowDefinition Height="157*"></RowDefinition>
+            <RowDefinition Height="65*"></RowDefinition>
+            <RowDefinition Height="41*"></RowDefinition>
+            <RowDefinition Height="155*"></RowDefinition>
             <RowDefinition Height="60"></RowDefinition>
         </Grid.RowDefinitions>
-        <Label Content="Enter description:" Grid.Row="2" Margin="74,72,347,5" Grid.RowSpan="2"/>
+        <Label Content="Enter description:" Grid.Row="3" Margin="74,13,347,5"/>
 
-        <TextBox x:Name="FoodFromDb" Grid.Row="3" HorizontalAlignment="Left" Text="Find food" VerticalAlignment="Top" Width="97" Height="18" Margin="324,3,0,0"/>
+        <TextBox x:Name="FoodFromDb" Grid.Row="3" HorizontalAlignment="Left" Text="" VerticalAlignment="Top" Width="97" Height="18" Margin="324,18,0,0" GotFocus="ClearBox"/>
         <ListBox x:Name="IngList" Grid.Row="4" Margin="324,0,66,2"/>
-        <TextBox x:Name="DishNameInput" Grid.Row="2" HorizontalAlignment="Center" Height="26" TextWrapping="Wrap" Text="Enter name of this dish" VerticalAlignment="Center" Width="164" FontSize="14"/>
+        <TextBox x:Name="DishNameInput" Grid.Row="2" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" FontSize="14" Margin="176,36,0,0" GotFocus="ClearBox"/>
         <Button x:Name="AddRecipeButton" Content="Add recipe" Grid.Row="5" HorizontalAlignment="Center"  VerticalAlignment="Top" Height="23" Width="150" Margin="0,14,0,0" FontWeight="Bold" Click="AddRecipeButtonClick"/>
-        <Button x:Name="AddToListButton" Content="Add"   Grid.Row="3" Margin="426,3,0,0" FontSize="10" FontWeight="Bold" Width="38" HorizontalAlignment="Left" VerticalAlignment="Top" Height="18" Click="AddToListButtonClick"/>
-        <Label Content="Make new recipe" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" FontWeight="Bold" FontSize="36"/>
-        <TextBox x:Name="DescriptionInput" HorizontalAlignment="Left" Height="155" Margin="74,0,0,0" Grid.Row="4" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="167"/>
+        <Button x:Name="AddToListButton" Content="Add"   Grid.Row="3" Margin="426,18,0,0" FontSize="10" FontWeight="Bold" Width="38" HorizontalAlignment="Left" VerticalAlignment="Top" Height="18" Click="AddToListButtonClick"/>
+        <Label Content="Make new recipe" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" FontWeight="Bold" FontSize="36" Height="58" Width="296"/>
+        <TextBox x:Name="DescriptionInput" HorizontalAlignment="Left" Height="155" Margin="74,0,0,0" Grid.Row="4" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="167"/>
+        <Label Content="Add ingredient:" Grid.Row="2" Width="140" Margin="324,62,66,16" Grid.RowSpan="2" FontSize="11"/>
+        <Label Content="Enter name of this dish"  HorizontalAlignment="Left" Height="36" Margin="158,0,0,0" Grid.Row="2" VerticalAlignment="Top" Width="226" FontSize="20"/>
 
 
     </Grid>

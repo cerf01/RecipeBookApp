@@ -27,21 +27,21 @@
             </MenuItem>
         </Menu>
 
-        <ToggleButton x:Name="ToggleButtonViewAll" Grid.Column="0" Grid.Row="2" Click="ToggleButtonViewAllClick">
+        <ToggleButton x:Name="ToggleButtonViewAll" Grid.Column="0" Grid.Row="2" Click="AllClick">
             <WrapPanel Orientation="Vertical">
                 <Image  Height="30" Source="/Views/option-icon.png"></Image>
                 <TextBlock>View</TextBlock>
             </WrapPanel>
         </ToggleButton>
 
-        <ToggleButton x:Name="ToggleButtonAddRecipe" Grid.Column="0" Grid.Row="3" Click="ToggleButtonAddRecipeClick">
+        <ToggleButton x:Name="ToggleButtonAddRecipe" Grid.Column="0" Grid.Row="3" Click="AllClick">
             <WrapPanel Orientation="Vertical">
                 <Image  Height="30" Source="/Views/option-icon.png"></Image>
                 <TextBlock>Add Recipe</TextBlock>
             </WrapPanel>
         </ToggleButton>
 
-        <ToggleButton x:Name="ToggleButtonAddFood" Grid.Column="0" Grid.Row="4" Click="ToggleButtonAddFoodClick">
+        <ToggleButton x:Name="ToggleButtonAddFood" Grid.Column="0" Grid.Row="4" Click="AllClick">
             <WrapPanel Orientation="Vertical">
                 <Image  Height="30" Source="/Views/option-icon.png"></Image>
                 <TextBlock>Add Food</TextBlock>
